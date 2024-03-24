@@ -28,7 +28,6 @@ def change_data():
         for i in data:  # Создаем список значений id (id_list), находящихся в файле notes.csv
             data_list = i.split(' ')
             id_list.append(data_list[2][:-1])
-            print(id_list)
     if str(k) in id_list:
         ind = id_list.index(str(k))
         input_data()
@@ -41,3 +40,20 @@ def change_data():
     with open('notes.csv', 'w', encoding='utf-8') as f:
         f.writelines(data_list)
 
+def remove():
+    k = int(input("Введите номер ID заметки, которую Вы хотите удалить: "))
+    with open('notes.csv', 'r', encoding='utf-8') as f:
+        data = f.readlines()
+        id_list = []
+        for i in data:  # Создаем список значений id (id_list), находящихся в файле notes.csv
+            data_list = i.split(' ')
+            id_list.append(data_list[2][:-1])
+    if str(k) in id_list:
+        ind = id_list.index(str(k))
+        with open('notes.csv', 'r', encoding='utf-8') as f:
+            data = f.readlines()
+            data_list = data[:ind] + data[ind + 1:]
+    else:
+        print("Указанный Вами ID заметки не найден. Попробуйте ввести корректный номер.")
+    with open('notes.csv', 'w', encoding='utf-8') as f:
+        f.writelines(data_list)
