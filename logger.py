@@ -1,4 +1,4 @@
-import datetime
+import csv
 from data_create import header_data, body_data, id_data, current_datetime
 
 
@@ -20,6 +20,7 @@ def print_data():
         print(data)
         print(*data, sep='')
 
+
 def change_data():
     k, id_list = number_ID()
     if str(k) in id_list:
@@ -28,11 +29,12 @@ def change_data():
         with open('notes.csv', 'r', encoding='utf-8') as f:
             data = f.readlines()
             change_line = data.pop()
-            data_list = data[:ind] + [change_line] + data[(ind+1):]
+            data_list = data[:ind] + [change_line] + data[(ind + 1):]
     else:
         print("Указанный Вами ID заметки не найден. Попробуйте ввести корректный номер.")
     with open('notes.csv', 'w', encoding='utf-8') as f:
         f.writelines(data_list)
+
 
 def remove():
     k, id_list = number_ID()
@@ -46,6 +48,7 @@ def remove():
     with open('notes.csv', 'w', encoding='utf-8') as f:
         f.writelines(data_list)
 
+
 def number_ID():
     k = int(input("Введите номер ID заметки: "))
     with open('notes.csv', 'r', encoding='utf-8') as f:
@@ -56,6 +59,7 @@ def number_ID():
             id_list.append(data_list[2][:-1])
     return k, id_list
 
+
 def print_note():
     k, id_list = number_ID()
     if str(k) in id_list:
@@ -65,3 +69,15 @@ def print_note():
             print(data[ind])
     else:
         print("Указанный Вами ID заметки не найден. Попробуйте ввести корректный номер.")
+
+
+def print_date_selection():  # делаем выборку по дате
+    with open('notes.csv', 'r', encoding='utf-8') as csv_file:
+        search_value = input("Введите дату записи/изменения файла для поиска в формате DD-MM-YYYY: ")
+        for row in csv_file:
+            if (search_value in row):
+                print(row[:-1])
+            else:
+                print("Запись не найдена.")
+
+

@@ -1,14 +1,14 @@
-from logger import input_data, print_data, change_data, remove, print_note
+from logger import input_data, print_data, change_data, remove, print_note, print_date_selection
 
 
 def interface():
     print(
         "Добрый день! Вы запустили приложение 'Заметки'. В программе используются следующие команды:"
-        "\n 1 - создание заметки \n 2 - вывод всех заметок \n 3 - вывод заметки (по номеру ID) 4 - изменение заметки" 
-        "\n 5 - удаление заметки")
+        "\n 1 - создание заметки \n 2 - вывод всех заметок \n 3 - вывод заметки (по номеру ID) \n 4 - изменение заметки" 
+        "\n 5 - удаление заметки, \n 6 - выборка заметок по дате")
     command = input("Введите число: ")
 
-    while command != "1" and command != "2" and command != "3" and command != "4" and command != "5":
+    while command != "1" and command != "2" and command != "3" and command != "4" and command != "5" and command != "6":
         print("Неправильный ввод")
         command = input("Введите число: ")
 
@@ -22,3 +22,5 @@ def interface():
         change_data()
     elif command == "5":
         remove()
+    elif command == "6":
+        print_date_selection()
