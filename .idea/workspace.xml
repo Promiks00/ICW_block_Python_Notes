@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf2907d9-2410-4dd3-bbc9-c0782544d818" name="Changes" comment="added change_data()">
+    <list default="true" id="cf2907d9-2410-4dd3-bbc9-c0782544d818" name="Changes" comment="some improvements (number_id(), print_note())">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/logger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui.py" afterDir="false" />
@@ -39,13 +39,13 @@
     "Python.main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "3__edit__notes",
+    "git-widget-placeholder": "4__remove-and-others",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.logger">
+  <component name="RunManager" selected="Python.main">
     <configuration name="data_create" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ICW_block_Python(Notes)" />
       <option name="ENV_FILES" value="" />
@@ -117,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.logger" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.logger" />
         <item itemvalue="Python.data_create" />
       </list>
     </recent_temporary>
@@ -148,16 +148,34 @@
       <option name="project" value="LOCAL" />
       <updated>1711270250321</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added def remove()">
+      <option name="closed" value="true" />
+      <created>1711292514912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711292514913</updated>
+    </task>
+    <task id="LOCAL-00003" summary="some improvements (number_id(), print_note())">
+      <option name="closed" value="true" />
+      <created>1711294295028</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711294295028</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added change_data()" />
-    <option name="LAST_COMMIT_MESSAGE" value="added change_data()" />
+    <MESSAGE value="added def remove()" />
+    <MESSAGE value="some improvements (number_id(), print_note())" />
+    <option name="LAST_COMMIT_MESSAGE" value="some improvements (number_id(), print_note())" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ICW_block_Python_Notes_$data_create.coverage" NAME="data_create Coverage Results" MODIFIED="1711265281640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ICW_block_Python_Notes_$main.coverage" NAME="main Coverage Results" MODIFIED="1711285809251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ICW_block_Python_Notes_$main.coverage" NAME="main Coverage Results" MODIFIED="1711295082076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ICW_block_Python_Notes_$logger.coverage" NAME="logger Coverage Results" MODIFIED="1711290130907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
