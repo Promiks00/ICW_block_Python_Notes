@@ -21,13 +21,7 @@ def print_data():
         print(*data, sep='')
 
 def change_data():
-    k = int(input("Введите номер ID заметки, которую Вы хотите изменить: "))
-    with open('notes.csv', 'r', encoding='utf-8') as f:
-        data = f.readlines()
-        id_list = []
-        for i in data:  # Создаем список значений id (id_list), находящихся в файле notes.csv
-            data_list = i.split(' ')
-            id_list.append(data_list[2][:-1])
+    k, id_list = number_ID()
     if str(k) in id_list:
         ind = id_list.index(str(k))
         input_data()
@@ -41,13 +35,7 @@ def change_data():
         f.writelines(data_list)
 
 def remove():
-    k = int(input("Введите номер ID заметки, которую Вы хотите удалить: "))
-    with open('notes.csv', 'r', encoding='utf-8') as f:
-        data = f.readlines()
-        id_list = []
-        for i in data:  # Создаем список значений id (id_list), находящихся в файле notes.csv
-            data_list = i.split(' ')
-            id_list.append(data_list[2][:-1])
+    k, id_list = number_ID()
     if str(k) in id_list:
         ind = id_list.index(str(k))
         with open('notes.csv', 'r', encoding='utf-8') as f:
@@ -57,3 +45,23 @@ def remove():
         print("Указанный Вами ID заметки не найден. Попробуйте ввести корректный номер.")
     with open('notes.csv', 'w', encoding='utf-8') as f:
         f.writelines(data_list)
+
+def number_ID():
+    k = int(input("Введите номер ID заметки: "))
+    with open('notes.csv', 'r', encoding='utf-8') as f:
+        data = f.readlines()
+        id_list = []
+        for i in data:  # Создаем список значений id (id_list), находящихся в файле notes.csv
+            data_list = i.split(' ')
+            id_list.append(data_list[2][:-1])
+    return k, id_list
+
+def print_note():
+    k, id_list = number_ID()
+    if str(k) in id_list:
+        ind = id_list.index(str(k))
+        with open('notes.csv', 'r', encoding='utf-8') as f:
+            data = f.readlines()
+            print(data[ind])
+    else:
+        print("Указанный Вами ID заметки не найден. Попробуйте ввести корректный номер.")
