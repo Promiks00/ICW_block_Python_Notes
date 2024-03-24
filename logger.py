@@ -18,3 +18,14 @@ def print_data():
     with open('notes.csv', 'r', encoding='utf-8') as f:
         data = f.readlines()
         print(*data, sep='')
+
+def change_data():
+    k = int(input("Введите номер записи, который Вы хотите изменить: "))
+    input_data()           # Вызываем функцию input_data(), которая добавляет запись в конец файла
+    with open('notes.csv', 'r', encoding='utf-8') as f:
+        data = f.readlines()
+        change_line = data.pop()
+        data_list = data[:k-1] + change_line + data[k:1]
+    with open('notes.csv', 'w', encoding='utf-8') as f:
+        f.writelines(data_list)
+
