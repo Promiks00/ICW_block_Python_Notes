@@ -8,7 +8,6 @@ def input_data():
     body = body_data()
     now = current_datetime()
 
-
     with open('notes.csv', 'a', encoding='utf-8') as f:
         f.write(f"ID заметки: {note_id}; Заголовок: {header}; Текст: {body}; Дата/время создания(изменения): {now}\n")
 
