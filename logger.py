@@ -14,10 +14,9 @@ def input_data():
     print("Заметка успешно сохранена")
 
 
-def print_data():
+def print_all_notes():
     with open('notes.csv', 'r', encoding='utf-8') as f:
         data = f.readlines()
-        print(data)
         print(*data, sep='')
 
 
@@ -75,7 +74,7 @@ def print_date_selection():  # делаем выборку по дате
     with open('notes.csv', 'r', encoding='utf-8') as csv_file:
         search_value = input("Введите дату записи/изменения файла для поиска в формате DD-MM-YYYY: ")
         for row in csv_file:
-            if (search_value in row):
+            if search_value in row:
                 print(row[:-1])
             else:
                 print("Запись не найдена.")
