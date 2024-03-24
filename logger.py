@@ -13,7 +13,8 @@ def input_data():
 
     print("Заметка успешно сохранена")
 
+
 def print_data():
     with open('notes.csv', 'r', encoding='utf-8') as f:
         data = f.readlines()
-        print(data)
+        print(*data, sep='')

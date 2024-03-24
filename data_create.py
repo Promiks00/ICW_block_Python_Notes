@@ -26,5 +26,5 @@ def body_data():
 
 def current_datetime():
     now = datetime.now()
-    formatted_date = now.strftime("%d-%m-%Y / %H:%M:%S")
+    formatted_date = now.strftime("%d-%m-%Y/%H:%M:%S")
     return formatted_date

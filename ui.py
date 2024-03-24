@@ -7,7 +7,7 @@ def interface():
         "\n 1 - создание заметки \n 2 - вывод заметки \n 3 - изменение заметки \n 4 - удаление заметки")
     command = input("Введите число: ")
 
-    while command != "1" or command != "2":
+    while command != "1" and command != "2":
         print("Неправильный ввод")
         command = input("Введите число: ")
 
