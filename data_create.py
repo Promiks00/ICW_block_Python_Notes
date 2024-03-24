@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 def id_data():
     try:
         with open('id.txt', 'r+') as file:
@@ -11,7 +14,6 @@ def id_data():
     return current_id
 
 
-
 def header_data():
     header = input("Введите название Вашей заметки: ")
     return header
@@ -20,3 +22,9 @@ def header_data():
 def body_data():
     body = input("Введите текст Вашей заметки: ")
     return body
+
+
+def current_datetime():
+    now = datetime.now()
+    formatted_date = now.strftime("%d-%m-%Y / %H:%M:%S")
+    return formatted_date
